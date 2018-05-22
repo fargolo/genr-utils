@@ -1,3 +1,7 @@
+################################################################
+# title      : tableH
+# description: Writes table to .docx file with vanilla template
+
 tableH <- function (data,tablename,filename)
 {
   require(ReporteRs)

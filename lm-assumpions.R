@@ -1,10 +1,15 @@
+################################################################
+# title      : Linear model assumptions
+# description: Routine for testing almost all
+#              assumptions in a linear model.
+
 library(lmtest)
 library(faraway)
 library(car)
 library(MASS)
 
-#Criar função interativa
-#Incluir possibilidade de regressão hierárquica com mtable(modelo1,modelo2)
+#Criar fun??o interativa
+#Incluir possibilidade de regress?o hier?rquica com mtable(modelo1,modelo2)
 #do pacote memisc
 
 #Plots por pares
@@ -68,7 +73,7 @@ abline(h = 1)
 
 #Medidas de influencia
 #influence.measures calcula todas as medidas de influencia
-#e retorna para um objeto. A matriz is.inf tem vetores lógicos
+#e retorna para um objeto. A matriz is.inf tem vetores l?gicos
 #Com TRUE para pontos de influencia.
 MyInfMeas <- influence.measures(MyModel)
 which(apply(MyInfMeas$is.inf,1,any))

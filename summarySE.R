@@ -1,3 +1,9 @@
+################################################################
+# title      : Summary stats for ggplot
+# description: Auxiliary function for 
+#              http://www.cookbook-r.com/Graphs/...
+#              Plotting_means_and_error_bars_(ggplot2)
+
 summarySE <- function(data=NULL, measurevar, groupvars=NULL,
                       conf.interval=.95, na.rm=FALSE, .drop=TRUE) {
   require(plyr)

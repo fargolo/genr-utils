@@ -1,8 +1,9 @@
-#Calibration plot with:
-#Bars: Absolute observed vs. predicted values
-#Point distance to line: Deviation from observed
-#"scale" defaulted to 100. This makes distances to points 
-#represented in percentages on the y axis
+################################################################
+# title      : Calibration plot
+# description: One client needed specific graph of predictions 
+#              according to percentiles. Inputs: (1) outcomes,
+#              a vector of 0/1 observations ; (2) probs, predicted
+#              prabiblities ; (3) g number of groups and (4) title. 
 
 calib.plot <- function(outcomes,probs,g = 10,graph.tit="Calibration"){
   require(ggplot2)

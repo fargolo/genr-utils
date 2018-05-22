@@ -1,10 +1,13 @@
-#Input: glm fit -> response=binomial(link = "Logit")
-#Return:
-#1. Plot
-#2. Matrix with: coeff,std err,OR and 95% CI)
-#3. Pseudo R2s, LR, Loglikelihood, Dev,AIC,BIC,N
-#4. Model fitted
-h1lrm <- function(fit,roc.color="#0000AF",lang="pt", plot.title = "",
+#######################################################
+# title      : lrm.summ
+# description: Sequentially extracts some measures from a 
+#              glm object fitted for logistic regression.  
+#              Returns list with:
+#              (1) AUROC plot with point estimate and bootstrapped CI.
+#              (2) Matrix with: coeff,std err,OR and 95% CI
+#              (3) Pseudo R2s, LR, Loglikelihood, Dev,AIC,BIC,N
+#              (4) Model fitted
+lrm.summ <- function(fit,roc.color="#0000AF",lang="pt", plot.title = "",
                   sdigits=3,geom="line"){
   require(ggplot2)
   require(pROC)
@@ -68,4 +71,3 @@ h1lrm <- function(fit,roc.color="#0000AF",lang="pt", plot.title = "",
   fit.stats <- rbind(fit.stats$summaries,fit.hoslem.mat)
   return(list(fit.plot,conf.fit,fit.stats,fit))
 }
-

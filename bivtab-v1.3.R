@@ -1,7 +1,23 @@
-# Bivariate tables 
-## Codigo antigo que usava para
-## gerar automaticamente tabelas bivariadas
-## Devo retrabalhá-lo em algum momento. Use sob seu proprio risco
+##########################################################################
+# title      : Automate bivariate tables
+# description: I lost count on how many bivariate tables I've run.
+#              Sometimes, people want to discuss them. Sometimes, 
+#              hypothesis testing. Avoid tedious work when comparing
+#              groups. 
+# usage      :       
+# inputs     : (1) dataframe, (2) list of numeric variables in dataframe
+#              (3) list of categhorical variables in dataframe
+#              (4) value for groups, (5) decimal plates
+#              (6) decimal plates for p value
+# 
+#              Decide if data has normal distribution.
+#              2.1 - Case yes: mean +- std
+#              2.2 - Case no : median (tertiles)
+# returns    : table with summary of variables and p values
+# warning    : this code was written when I was just started
+#              learning R revisiting programming. 
+#              It means cryptic code and 'suboptimal' style :)
+
 bivtab <- function (data,var.num,var.cat,var.group, dec.plat= 1,dec.p = 3){
   print ("Variaveis categoricas e de grupo devem ser fatores")
   require(plyr)

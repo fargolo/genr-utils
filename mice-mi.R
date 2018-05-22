@@ -1,3 +1,7 @@
+################################################################
+# title      : Multiple imputation with mice
+# description: Basic step by step illustration of MI with mice 
+
 # Using airquality dataset
 data <- airquality
 data[4:10,3] <- rep(NA,7)

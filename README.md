@@ -1,2 +1,3 @@
 # genr-utils
-Legacy code of general utilities I developed when I worked as a private consultant for researchers. Use at your own risk.  
+Legacy code.  
+Old tools I've built when working as a consultant for researchers.  

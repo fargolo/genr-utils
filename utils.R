@@ -1,3 +1,11 @@
+################################################################
+# title      : General Utilities
+# description: (1) as.fumeric is a shortcut to directly
+#              morph factors no numeric.
+#              (2) recode.na was an alias to recode variables using
+#              9999 and similar as NA codes.
+#              (3) Alias to density plot using ggplot2
+
 #General utilities
 
 #Converts factor variable to numeric
