@@ -33,3 +33,4 @@ meta_res <- escalc(measure = "SMD",
 meta_rma <- rma(yi,vi,data=meta_res) 
 
 plot(meta_rma)
+forest(meta_rma)
